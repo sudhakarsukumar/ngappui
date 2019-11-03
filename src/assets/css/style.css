@@ -12857,7 +12857,7 @@ app-root {
   width: 100%; }
 
 .header-fixed .app-body {
-  margin-top: 55px; }
+  margin-top: 0px; }
 
 .sidebar-hidden .sidebar {
   margin-left: -200px; }
@@ -12866,7 +12866,7 @@ app-root {
   position: fixed;
   z-index: 1019;
   width: 200px;
-  height: calc(100vh - 55px); }
+  height: calc(100vh - 0px); }
 
 .sidebar-fixed .main, .sidebar-fixed .app-footer {
   margin-left: 200px; }

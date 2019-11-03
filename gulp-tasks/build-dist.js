@@ -92,7 +92,7 @@ gulp.task('replace:node_modules', function(){
 });
 
 gulp.task('vendors', function(callback) {
-    runSequence('vendors:css', 'vendors:js', 'copy:vendorsFonts', 'copy:vendorsFlags', 'replace:node_modules', callback);
+    runSequence('vendors:css', 'vendors:js', 'copy:vendorsFonts', 'replace:node_modules', callback);
 });
 
 gulp.task('clean:dist', function () {
