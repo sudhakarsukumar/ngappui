@@ -14,7 +14,8 @@ var grayLightest =  '#f8f9fa';
 angular
 .module('app', [
   'ui.router',
-  'angular-loading-bar'
+  'angular-loading-bar',
+  'ngAnimate'
 ])
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
   cfpLoadingBarProvider.includeSpinner = false;

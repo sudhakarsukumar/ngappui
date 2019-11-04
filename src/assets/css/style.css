@@ -2922,7 +2922,7 @@ select.form-control-lg:not([size]):not([multiple]),
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem;
     line-height: 1.5;
-    border-radius: 0;
+    border-radius: 6px;
     -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -19105,4 +19105,43 @@ hr.transparent {
 
 .bg-none {
     background: transparent !important;
+}
+.card-header, .card-footer, .card{
+  border:0px solid transparent !important;
+  background:transparent !important;
+}
+.metric_card{
+  background: #fff !important;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: height 0.15s ease-out;
+  cursor: pointer;
+}
+.metric_card .card-body{
+  display:none;
+}
+.active .metric_card{
+  background: #6b75ca !important;
+  height: 170px;
+  transition: height 0.25s ease-in;
+  color:#fff !important;
+}
+.active .metric_card .card-footer{
+  display: none;
+}
+.active .metric_card .card-body{
+  display: block;
+}
+.slick-list{
+  padding: 0 8% 0 0 !important;
+}
+.session_list .slick-slide{
+  outline:none !important; 
+  cursor: move;
+}
+
+.session_list .slick-slide .card{
+  background: #fff !important;
+  border-radius: 10px;
 }

@@ -1,36 +1,17 @@
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-lg-9">
-            <div class="filters_ct" ng-controller="cardChartCtrl1">
-                <ul>
-                    <li ng-repeat="filter in filters" ng-click="select($index)" ng-class="{sel: $index == selected}">
-                        <span class="filters_ct_status"></span> {{filter.time}}
-                    </li>
-                </ul>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-6">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-6">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-6">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-6">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
+            <div class="row" ng-controller="cardChartCtrl1">
+                <div class="col-lg-3 col-md-3 col-6" ng-repeat="metric in metrics" ng-click="select($index)" ng-class="{active: $index == selected}">
+                    <div class="metric_card card">
+                        <div class="card-header"> <h3 class="mb-0">{{metric.count}}</h3><small><b class="text-uppercase" style="opacity: 0.5;">{{metric.title}}</b></small></div>
+                        <div class="card-body"></div>
+                        <div class="card-footer pt-2">
+                            <b class="text-success" ng-if="metric.status > 0 || metric.status == 0">
+                            <i class="fa fa-long-arrow-up"></i> +{{metric.status}} %</b>
+                            <b class="text-danger" ng-if="metric.status < 0">
+                                    <i class="fa fa-long-arrow-down"></i> {{metric.status}} %</b>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,34 +19,22 @@
                 <div class="col-lg-12">
                     <div class="card bg-none">
                         <div class="card-header bg-none">
-                            <h4 class="card_title">Sessions Overview</h4>
+                            <div class="float-left">
+                            <h4 class="card_title mb-0">Sessions Overview</h4>
+                            <small>11/04/2019 - 12/04/2019</small>
                         </div>
-                        <div class="card-body" style="height: 280px;"></div>
+                        <div class="float-right">
+                            <button class="btn btn-dark"><i></i> Download CSV</button>
+                        </div>
+                        </div>
+                        <div class="card-body" style="height: 250px;"></div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
+            <div class="row session_list" ng-controller="cardChartCtrl1">
+                <div class="col-lg-3" ng-repeat="metric in metrics">
                     <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
-                        <div class="card-body">1883 / sessions</div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-header">Top Platform</div>
+                        <div class="card-header"><div class="float-left"></div><div></div><div class="pull-right"><button class="btn btn-sm" style="background: transparent;"><i class="fa fa-ellipsis-v"></i></button></div></div>
                         <div class="card-body">1883 / sessions</div>
                     </div>
                 </div>
