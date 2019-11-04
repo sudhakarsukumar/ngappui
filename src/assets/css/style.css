@@ -19003,6 +19003,20 @@ hr.transparent {
     background-size: 100%;
 }
 
+.navbar-toggler-icon {
+    position: relative;
+}
+
+.navbar-toggler-icon:before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/toggle.svg);
+    width: 34px;
+    height: 34px;
+    left: 0;
+    background-size: 100%;
+}
+
 .nav-item .nav-link {
     display: flex;
 }
