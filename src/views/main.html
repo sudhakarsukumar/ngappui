@@ -1,6 +1,13 @@
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-lg-9">
+            <div class="filters_ct" ng-controller="cardChartCtrl1">
+                <ul>
+                    <li ng-repeat="filter in filters" ng-click="select($index)" ng-class="{sel: $index == selected}">
+                        <span class="filters_ct_status"></span> {{filter.time}}
+                    </li>
+                </ul>
+            </div>
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-6">
                     <div class="card">
