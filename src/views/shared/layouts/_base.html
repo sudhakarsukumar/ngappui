@@ -1,26 +1,8 @@
-<!-- Navbar -->
-<!-- <div ng-include="'views/shared/navbar.html'" include-replace></div> -->
 <div class="app-body">
-  <!-- Navigation -->
-  <div ng-include="'views/shared/sidebar-nav.html'" include-replace></div>
-  <!-- Main content -->
-  <main class="main">
-      <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- <a class="navbar-brand" ui-sref="app.main"></a> -->
-        <ul class="nav navbar-nav d-md-down-none">
-          <li class="nav-item">
-            <a class="nav-link navbar-toggler sidebar-toggler" href="#">
-              <span class="navbar-toggler-icon"></span>
-            </a>
-          </li>
-      
-        </ul>
-    <div class="container-fluid">
-      <ui-view></ui-view>
-    </div>
-    <!-- /.conainer-fluid -->
-  </main>
-
+    <!-- Navigation -->
+    <div ng-include="'views/shared/sidebar-nav.html'" include-replace></div>
+    <!-- Main content -->
+    <main class="main">
+        <ui-view></ui-view>
+    </main>
 </div>
