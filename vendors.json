@@ -18,6 +18,7 @@
         "node_modules/jquery/dist/jquery.min.map",
         "node_modules/moment/min/moment.min.js",
         "node_modules/popper.js/dist/umd/popper.min.js",
-        "node_modules/popper.js/dist/umd/popper.min.js.map"
+        "node_modules/popper.js/dist/umd/popper.min.js.map",
+        "https://cdnjs.cloudflare.com/ajax/libs/angular-svg-round-progressbar/0.4.8/roundProgress.min.js"
     ]
 }
