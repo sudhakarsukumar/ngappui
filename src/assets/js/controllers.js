@@ -97,7 +97,37 @@ function sessionCtrl($scope) {
             slidesToShow: 3,
             dots: false,
             arrows: false,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
         });
+        $(window).scroll(function(){
+            var sticky = $('.app-header'),
+                scroll = $(window).scrollTop();
+          
+            if (scroll >= 5) sticky.addClass('fixed');
+            else sticky.removeClass('fixed');
+          });
     });
 }
 sessionOverviewCtrl.$inject = ['$scope'];

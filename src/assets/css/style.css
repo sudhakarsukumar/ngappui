@@ -15115,7 +15115,7 @@ base-chart.chart {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    height: 55px;
+    height: 45px;
     padding: 0;
     margin: 0;
     background-color: #fff;
@@ -18239,7 +18239,7 @@ app-root {
 
 .sidebar-fixed .sidebar {
     position: fixed;
-    z-index: 1019;
+    z-index: 9999;
     width: 200px;
     height: calc(100vh - 0px);
     box-shadow: #c6cbd4 -3px 0px 10px;
@@ -19248,4 +19248,74 @@ hr.transparent {
     left: 6px !important;
     top: -6px !important;
     line-height: 6px !important;
+}
+.ngappui .navbar-toggler-icon:before{
+ transform:rotate(-180deg);
+}
+.ngappui.mini_sidebar .navbar-toggler-icon:before{
+    transform:rotate(0deg);
+}
+
+.app-header{
+    display:none;
+}
+@media(max-width:767px){
+    body{
+        overflow:auto;
+    }
+    .app-header{
+        background: transparent !important;
+        border:0px !important;
+    }
+    .app-header .navbar-toggler-icon:before{
+        display:none;
+    }
+    .main{
+        padding-top:55px !important;
+    }
+    .app-header.navbar{
+        display:flex !important;
+    }
+    .app-header.navbar .navbar-toggler{
+        float: right;
+    }
+    .sidebar-mobile-show .main{
+        margin-right:0px !important;
+    }
+    ._nav-brand{
+        display: block;
+        width: 32px;
+        margin-left: 12px;
+        margin-top: 6px;    
+    }
+    ._logo {
+        width: 32px;
+        height: 56px;
+    } 
+    .mobile-sidebar-toggler{
+        outline:none;
+    }
+    .metric_card{
+        border-radius: 20px;
+    }
+    .metric_card small{
+        font-size:68%;
+    }
+    .app-header.fixed{
+        background:#fff !important;
+        box-shadow: #c6cbd4 -3px 0px 10px;
+    }
+    .slick-list {
+        padding: 0 18% 0 0 !important;
+    }
+}
+@media(min-width:768px) and (max-width:991.98px){
+    .mini_sidebar .sidebar {
+        margin-left: 0px !important;
+    }
+    body{
+        overflow: auto;
+    }
+    .metric_card small{
+        font-size:  60% !important;  }
 }
