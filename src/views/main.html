@@ -20,13 +20,21 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card bg-none" ng-controller="sessionOverviewCtrl">
+                    <div class="card sessionOverview bg-none" ng-controller="sessionOverviewCtrl">
                         <div class="card-header bg-none">
                             <div class="float-left">
                                 <h4 class="card_title mb-0">Sessions Overview</h4>
-                                <small>11/04/2019 - 12/04/2019</small>
+                                <small class="cust_color"><i class="icon-calendar"></i>11/04/2019 - 12/04/2019</small>
                             </div>
-                            <div class="float-right">
+                            <div class="float-right _tools" style="display: flex;">
+                                <ul class="_filters">
+                                    <li>Today</li>
+                                    <li>7d</li>
+                                    <li class="active">2w</li>
+                                    <li>1m</li>
+                                    <li>3m</li>
+                                    <li>2019</li>
+                                </ul>
                                 <button class="btn btn-dark p-2" style="display: flex;"><i class="icon-download"></i> <span class="pl-4" style="font-size: 12px;font-weight: 600;">Download CSV</span></button>
                             </div>
                         </div>
@@ -95,6 +103,7 @@
                             </div>
                             <div class="_stat-pro">
                                 <round-progress max="100" current="20" color="#6b75ca" bgcolor="#dfe0e9" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="false" duration="800" animation="easeInOutQuart" animation-delay="0"></round-progress>
+                                <i class="icon-users"></i>
                             </div>
                             <div class="_stat-data">
                                 <p class="mb-0 max_val"><small><b>MAX 512</b></small></p>
@@ -107,6 +116,7 @@
                             </div>
                             <div class="_stat-pro">
                                 <round-progress max="100" current="70" color="#6b75ca" bgcolor="#dfe0e9" radius="100" stroke="20" semi="false" rounded="true" clockwise="true" responsive="false" duration="800" animation="easeInOutQuart" animation-delay="0"></round-progress>
+                                <i class="icon-users"></i>
                             </div>
                             <div class="_stat-data">
                                 <p class="mb-0 max_val"><small><b>MAX 381</b></small></p>

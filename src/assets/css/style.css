@@ -19034,6 +19034,42 @@ hr.transparent {
     background-size: 100%;
 }
 
+.icon-calendar {
+    margin-right: 23px;
+    position: relative;
+}
+
+.icon-calendar:before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/calendar.svg);
+    width: 24px;
+    height: 24px;
+    left: -5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% !important;
+    background-size: 100%;
+}
+
+.icon-users {
+    position: relative;
+}
+
+.icon-users:before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/user.svg);
+    width: 24px;
+    height: 24px;
+    left: -13px;
+    top: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% !important;
+    background-size: 100%;
+}
+
 .navbar-toggler-icon {
     position: relative;
 }
@@ -19249,73 +19285,123 @@ hr.transparent {
     top: -6px !important;
     line-height: 6px !important;
 }
-.ngappui .navbar-toggler-icon:before{
- transform:rotate(-180deg);
-}
-.ngappui.mini_sidebar .navbar-toggler-icon:before{
-    transform:rotate(0deg);
+
+.ngappui .navbar-toggler-icon:before {
+    transform: rotate(-180deg);
 }
 
-.app-header{
-    display:none;
+.ngappui.mini_sidebar .navbar-toggler-icon:before {
+    transform: rotate(0deg);
 }
-@media(max-width:767px){
-    body{
-        overflow:auto;
+
+.app-header {
+    display: none;
+}
+
+._filters {
+    display: flex;
+    padding-left: 0px;
+    list-style: none;
+    margin-right: 15px;
+}
+
+._filters li {
+    padding: 0px 5px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #9297b6;
+}
+
+._filters li.active {
+    color: #29363d;
+    position: relative;
+}
+
+._filters li.active:before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 0px;
+    top: -5px;
+    background-image: url(../img/active.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media(max-width:767px) {
+    body {
+        overflow: auto;
     }
-    .app-header{
+    .app-header {
         background: transparent !important;
-        border:0px !important;
+        border: 0px !important;
     }
-    .app-header .navbar-toggler-icon:before{
-        display:none;
+    .app-header .navbar-toggler-icon:before {
+        display: none;
     }
-    .main{
-        padding-top:55px !important;
+    .main {
+        padding-top: 55px !important;
     }
-    .app-header.navbar{
-        display:flex !important;
+    .app-header.navbar {
+        display: flex !important;
     }
-    .app-header.navbar .navbar-toggler{
+    .app-header.navbar .navbar-toggler {
         float: right;
     }
-    .sidebar-mobile-show .main{
-        margin-right:0px !important;
+    .sidebar-mobile-show .main {
+        margin-right: 0px !important;
     }
-    ._nav-brand{
+    ._nav-brand {
         display: block;
         width: 32px;
         margin-left: 12px;
-        margin-top: 6px;    
+        margin-top: 6px;
     }
     ._logo {
         width: 32px;
         height: 56px;
-    } 
-    .mobile-sidebar-toggler{
-        outline:none;
     }
-    .metric_card{
+    .mobile-sidebar-toggler {
+        outline: none;
+    }
+    .metric_card {
         border-radius: 20px;
     }
-    .metric_card small{
-        font-size:68%;
+    .metric_card small {
+        font-size: 68%;
     }
-    .app-header.fixed{
-        background:#fff !important;
+    .app-header.fixed {
+        background: #fff !important;
         box-shadow: #c6cbd4 -3px 0px 10px;
     }
     .slick-list {
         padding: 0 18% 0 0 !important;
     }
+    .sessionOverview .card-header,
+    .sessionOverview .card-body {
+        padding: 0px !important;
+    }
+    .sessionOverview ._tools {
+        float: left;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
 }
-@media(min-width:768px) and (max-width:991.98px){
+
+@media(min-width:768px) and (max-width:991.98px) {
     .mini_sidebar .sidebar {
         margin-left: 0px !important;
     }
-    body{
+    body {
         overflow: auto;
     }
-    .metric_card small{
-        font-size:  60% !important;  }
+    .metric_card small {
+        font-size: 60% !important;
+    }
+}
+
+.cust_color {
+    color: #9297b6;
+    font-weight: bold;
 }
