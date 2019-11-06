@@ -10925,3 +10925,9 @@ dist/vendors/js/popper.min.js.map
 dist/views/main.html
 dist/views/shared/sidebar-nav.html
 dist/views/shared/layouts/_base.html
+dist/assets/img/active.svg
+dist/assets/img/calendar.svg
+dist/assets/img/user.svg
+dist/assets/vendors/js/roundProgress.min.js
+ngappui.zip
+.gitignore
